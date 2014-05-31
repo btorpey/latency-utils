@@ -12,5 +12,6 @@ if [[ ${TERMINAL} != "" ]]; then
   PREFIX+=";set terminal $TERMINAL"
 fi
 
-#gnuplot -persist -e "DATAFILE='${DATAFILE}'" $(basename $0 .sh).gp 
-gnuplot -persist -e "$PREFIX" $(basename $0 .sh).gp 
+SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE}) && /bin/pwd)   
+
+gnuplot -persist -e "$PREFIX" ${SCRIPT_DIR}/$(basename $0 .sh).gp 
