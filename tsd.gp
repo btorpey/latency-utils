@@ -33,7 +33,7 @@ set autoscale y
 set decimal locale
 # Change the following to accomodate input data to get better looking plots
 # (hint: gnuplot likes whole numbers better than fractions)
-SCALINGFACTOR=1000
+SCALINGFACTOR=1
 # specify the precision of points on y-axis - in this case, we are dealing with whole numbers
 set format y "%'6.0f"
 
