@@ -1,4 +1,9 @@
-#!/bin/bash 
+#!/bin/bash
+
+# Copyright 2014, 2015 by Bill Torpey. All Rights Reserved.
+# This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 United States License.
+# http://creativecommons.org/licenses/by-nc-nd/3.0/us/deed.en
+#
 
 DATAFILE=$1
 if [[ ${DATAFILE} == "" ]]; then
@@ -12,6 +17,6 @@ if [[ ${TERMINAL} != "" ]]; then
   PREFIX+=";set terminal $TERMINAL"
 fi
 
-SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE}) && /bin/pwd)   
+SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE}) && /bin/pwd)
 
-gnuplot -persist -e "$PREFIX" ${SCRIPT_DIR}/$(basename $0 .sh).gp 
+gnuplot -persist -e "$PREFIX" ${SCRIPT_DIR}/$(basename $0 .sh).gp
